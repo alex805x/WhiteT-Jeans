@@ -5,6 +5,18 @@
       "name": "James Dean",
       "context": "Rebel Without a Cause (1955)",
       "imageUrl": "/assets/james-dean.jpg"
+    },
+    {
+      "name": "John Travolta",
+      "context": "Greese",
+      "imageUrl": "https://media.vogue.co.uk/photos/5d547f0c5da545000800e91d/master/pass/original",
+      "id": "JT"
+    },
+    {
+      "id": "Justin Timberlack",
+      "name": "Justin Timberlack",
+      "context": "Himself",
+      "imageUrl": "https://i.pinimg.com/736x/8e/8d/d2/8e8dd2933f8fc1d88766a59a2658bcdf.jpg"
     }
   ]
 }
