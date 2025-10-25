@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "data"
+    label: "Deck"
+    files:
+      - name: "cards"
+        label: "Cards"
+        file: "data/cards.json"
+        format: "json"
+        fields:
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.context}}"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Context (movie/show/location)", name: "context", widget: "string" }
+              - { label: "Image", name: "imageUrl", widget: "image" }
