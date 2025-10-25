@@ -1,0 +1,10 @@
+{
+  "cards": [
+    {
+      "id": "james-dean",
+      "name": "James Dean",
+      "context": "Rebel Without a Cause (1955)",
+      "imageUrl": "/assets/james-dean.jpg"
+    }
+  ]
+}
