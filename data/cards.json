@@ -5,6 +5,12 @@
       "name": "James Dean",
       "context": "Rebel Without a Cause (1955)",
       "imageUrl": "/assets/james-dean.jpg"
+    },
+    {
+      "id": "Me",
+      "name": "Alex",
+      "context": "Myself",
+      "imageUrl": "/assets/231020-mr-lammert-8x10-no-tie.jpg"
     }
   ]
 }
