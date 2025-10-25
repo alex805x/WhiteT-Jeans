@@ -4,7 +4,7 @@
       "id": "james-dean",
       "name": "James Dean",
       "context": "Rebel Without a Cause (1955)",
-      "imageUrl": "/assets/james-dean.jpg"
+      "imageUrl": "https://cdn.britannica.com/78/90678-050-25A0396A/James-Dean-Rebel-Without-a-Cause-Nicholas.jpg"
     },
     {
       "name": "John Travolta",
@@ -17,6 +17,18 @@
       "name": "Justin Timberlack",
       "context": "Himself",
       "imageUrl": "https://i.pinimg.com/736x/8e/8d/d2/8e8dd2933f8fc1d88766a59a2658bcdf.jpg"
+    },
+    {
+      "id": "JD",
+      "name": "Johnny Depp",
+      "context": "Himself",
+      "imageUrl": "https://i.pinimg.com/736x/c2/75/6b/c2756bd4ff0c21f637f61dc7465a9c41.jpg"
+    },
+    {
+      "id": "TC",
+      "name": "Tom Cruise",
+      "context": "Maverick",
+      "imageUrl": "https://static0.srcdn.com/wordpress/wp-content/uploads/2024/03/tom-cruise-s-maverick-smiling-while-working-on-a-plane-in-top-gun-maverick-s-ending.jpg?w=1200&h=675&fit=crop"
     }
   ]
 }
