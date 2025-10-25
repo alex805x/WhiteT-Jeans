@@ -4,14 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Deck Admin</title>
-</head>
-<body>
-  <!-- Decap CMS script -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-  <!-- Force manual init after DOM is parsed -->
+  <!-- Must be BEFORE decap-cms.js -->
   <script>
     window.CMS_MANUAL_INIT = true;
+  </script>
+</head>
+<body>
+  <!-- Load Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Initialize after DOM is ready -->
+  <script>
     window.addEventListener('DOMContentLoaded', function () {
       if (window.CMS && typeof window.CMS.init === 'function') {
         window.CMS.init();
