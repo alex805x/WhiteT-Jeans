@@ -4,19 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Deck Admin</title>
-  <!-- Must be BEFORE decap-cms.js -->
-  <script>
-    window.CMS_MANUAL_INIT = true;
-  </script>
+  <!-- Identity widget enables Netlify Identity login UI -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+  <!-- Prevent Decap from auto-initializing before DOM is ready -->
+  <script>window.CMS_MANUAL_INIT = true;</script>
 </head>
 <body>
+  <!-- Explicit mount point for Decap CMS -->
+  <div id="nc-root"></div>
+
   <!-- Load Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <!-- Initialize after DOM is ready -->
+
+  <!-- Initialize after DOM is parsed -->
   <script>
     window.addEventListener('DOMContentLoaded', function () {
       if (window.CMS && typeof window.CMS.init === 'function') {
-        window.CMS.init();
+        window.CMS.init({ config: { load_config_file: true } });
       }
     });
   </script>
