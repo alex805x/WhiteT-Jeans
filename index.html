@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>White Tee & Jeans — Who Am I?</title>
+<style>
+  :root { --bg:#0b0c10; --card:#161b22; --ink:#e6f1ff; --muted:#9fb3c8; --accent:#2563eb; }
+  body { margin:0; font-family: system-ui, -apple-system, Roboto, "Segoe UI", Arial; background:var(--bg); color:var(--ink); display:flex; min-height:100dvh; }
+  .wrap { margin:auto; width:min(92vw,420px); display:flex; flex-direction:column; gap:14px; align-items:center; }
+  h1 { font-size:20px; font-weight:700; margin:6px 0 2px; text-align:center; color:#e6f1ff; }
+  .card { width:100%; border-radius:20px; background:var(--card); overflow:hidden; box-shadow:0 10px 24px rgba(0,0,0,.35); }
+  .image { width:100%; aspect-ratio:3/4; background:#0e1116; object-fit:cover; display:block; }
+  .meta { padding:14px 16px; }
+  .name { font-size:20px; font-weight:700; margin:0 0 6px; }
+  .context { font-size:14px; color:var(--muted); margin:0; }
+  .row { display:flex; gap:10px; margin-top:6px; }
+  button { appearance:none; border:0; border-radius:999px; padding:12px 18px; font-weight:700; color:white; background:var(--accent); cursor:pointer; }
+  .muted { color:#7d8ea3; font-size:12px; text-align:center; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>White Tee & Jeans — Who Am I?</h1>
+
+    <div class="card" id="card">
+      <img id="img" alt="Card image" class="image" />
+      <div class="meta">
+        <p class="name" id="name"></p>
+        <p class="context" id="context"></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <button id="shuffle">Shuffle</button>
+    </div>
+
+    <p class="muted">Tip: use your own licensed images. Works offline once images are cached.</p>
+  </div>
+
+<script>
+/** Minimal deck. Add/edit as needed. Use images you own or are licensed to use. */
+const CARDS = [
+  { id:"james-dean", name:"James Dean", context:"Rebel Without a Cause (1955)", imageUrl:"https://via.placeholder.com/900x1200?text=James+Dean" },
+  { id:"marlon-brando", name:"Marlon Brando", context:"A Streetcar Named Desire (1951)", imageUrl:"https://via.placeholder.com/900x1200?text=Marlon+Brando" },
+  { id:"bruce-springsteen", name:"Bruce Springsteen", context:"Born in the U.S.A. era", imageUrl:"https://via.placeholder.com/900x1200?text=Bruce+Springsteen" },
+  { id:"john-travolta", name:"John Travolta (Danny Zuko)", context:"Grease (1978)", imageUrl:"https://via.placeholder.com/900x1200?text=Danny+Zuko" },
+  { id:"fonzie", name:"Arthur “Fonzie” Fonzarelli", context:"Happy Days (TV)", imageUrl:"https://via.placeholder.com/900x1200?text=Fonzie" },
+  { id:"peter-parker", name:"Peter Parker (Spider-Man)", context:"Comics/casual looks", imageUrl:"https://via.placeholder.com/900x1200?text=Peter+Parker" },
+  { id:"archie", name:"Archie Andrews", context:"Archie Comics", imageUrl:"https://via.placeholder.com/900x1200?text=Archie+Andrews" }
+];
+
+/** No immediate repeats; cycle through the full set before reusing. */
+let bag = [];
+function nextIndex() {
+  if (bag.length === 0) {
+    bag = CARDS.map((_, i) => i);
+    for (let i = bag.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [bag[i], bag[j]] = [bag[j], bag[i]];
+    }
+  }
+  return bag.pop();
+}
+
+const els = {
+  img: document.getElementById("img"),
+  name: document.getElementById("name"),
+  context: document.getElementById("context"),
+  shuffle: document.getElementById("shuffle"),
+  card: document.getElementById("card")
+};
+
+function show(idx) {
+  const c = CARDS[idx];
+  els.img.src = c.imageUrl;
+  els.img.alt = `${c.name} — ${c.context}`;
+  els.name.textContent = c.name;
+  els.context.textContent = c.context;
+  try { localStorage.setItem("lastId", c.id); } catch {}
+}
+
+function pickAndShow() { show(nextIndex()); }
+
+els.shuffle.addEventListener("click", pickAndShow);
+
+/** Restore last card if available; otherwise pick fresh. */
+(function init() {
+  const lastId = (() => { try { return localStorage.getItem("lastId"); } catch { return null; }})();
+  const i = CARDS.findIndex(c => c.id === lastId);
+  if (i >= 0) show(i); else pickAndShow();
+})();
+</script>
+</body>
+</html>
