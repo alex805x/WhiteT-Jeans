@@ -29,6 +29,12 @@
       "name": "Tom Cruise",
       "context": "Maverick",
       "imageUrl": "https://static0.srcdn.com/wordpress/wp-content/uploads/2024/03/tom-cruise-s-maverick-smiling-while-working-on-a-plane-in-top-gun-maverick-s-ending.jpg?w=1200&h=675&fit=crop"
+    },
+    {
+      "id": "BP",
+      "name": "Brad Pitt",
+      "context": "Tyler Durden",
+      "imageUrl": "https://media.gq-magazine.co.uk/photos/5df7608364857c0008aab5dd/master/w_1600%2Cc_limit/20191216-Brad-Pitt-03.jpg"
     }
   ]
 }
