@@ -2,45 +2,45 @@
   "cards": [
     {
       "id": "james-dean",
-      "name": "James Dean",
-      "context": "Rebel Without a Cause (1955)",
+      "name": "James Dean (Rebel Without a Cause",
+      "context": "Jim Stark",
       "imageUrl": "https://cdn.britannica.com/78/90678-050-25A0396A/James-Dean-Rebel-Without-a-Cause-Nicholas.jpg"
     },
     {
-      "name": "John Travolta",
-      "context": "Greese",
+      "name": "John Travolta (Greese)",
+      "context": "Danny Zuko",
       "imageUrl": "https://media.vogue.co.uk/photos/5d547f0c5da545000800e91d/master/pass/original",
       "id": "JT"
     },
     {
-      "id": "Justin Timberlack",
-      "name": "Justin Timberlack",
-      "context": "Himself",
-      "imageUrl": "https://i.pinimg.com/736x/8e/8d/d2/8e8dd2933f8fc1d88766a59a2658bcdf.jpg"
-    },
-    {
-      "id": "JD",
-      "name": "Johnny Depp",
-      "context": "Himself",
-      "imageUrl": "https://i.pinimg.com/736x/c2/75/6b/c2756bd4ff0c21f637f61dc7465a9c41.jpg"
-    },
-    {
       "id": "TC",
-      "name": "Tom Cruise",
-      "context": "Maverick",
+      "name": "Tom Cruise (Top Gun)",
+      "context": "Pete \"Maverick\" Mitchell",
       "imageUrl": "https://static0.srcdn.com/wordpress/wp-content/uploads/2024/03/tom-cruise-s-maverick-smiling-while-working-on-a-plane-in-top-gun-maverick-s-ending.jpg?w=1200&h=675&fit=crop"
     },
     {
       "id": "BP",
-      "name": "Brad Pitt",
+      "name": "Brad Pitt (Fight Club)",
       "context": "Tyler Durden",
       "imageUrl": "https://media.gq-magazine.co.uk/photos/5df7608364857c0008aab5dd/master/w_1600%2Cc_limit/20191216-Brad-Pitt-03.jpg"
     },
     {
       "id": "MB",
-      "name": "Marlon Brando",
+      "name": "Marlon Brando (Steetcar Names Desire)",
       "imageUrl": "https://www.insidehook.com/wp-content/uploads/2016/06/GettyImages-97205269-e1466099362271-1.jpg?fit=2470%2C3469",
       "context": "Stanley"
+    },
+    {
+      "id": "Bruce W",
+      "name": "Bruce Willis (The Last Boy Scout)",
+      "imageUrl": "https://i.redd.it/qj3kuv5g7qmf1.jpeg",
+      "context": "Joe Hallenbeck"
+    },
+    {
+      "id": "Jeff B",
+      "name": "Jeff Bridges (The Big Lebowski)",
+      "context": "The Dude",
+      "imageUrl": "https://i0.wp.com/bamfstyle.com/wp-content/uploads/2021/03/Dude1Robe-CL-Robe.jpg?resize=664%2C358&ssl=1"
     }
   ]
 }
