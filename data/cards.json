@@ -41,6 +41,18 @@
       "name": "Jeff Bridges (The Big Lebowski)",
       "context": "The Dude",
       "imageUrl": "https://i0.wp.com/bamfstyle.com/wp-content/uploads/2021/03/Dude1Robe-CL-Robe.jpg?resize=664%2C358&ssl=1"
+    },
+    {
+      "id": "Wolver",
+      "name": "Hugh Jackman (x-men)",
+      "context": "Wolverine",
+      "imageUrl": "https://media.gq.com/photos/66aa432270b4152ba870181b/master/w_1600%2Cc_limit/Wolverine-3.jpg"
+    },
+    {
+      "id": "KR",
+      "name": "Keanu Reeves (Point Break)",
+      "context": "Johnny Utah",
+      "imageUrl": "https://cdn2.bigcommerce.com/server4900/364bb/products/117201/images/83762/27765__03672.1342528404.1280.1280.jpg?c=2"
     }
   ]
 }
